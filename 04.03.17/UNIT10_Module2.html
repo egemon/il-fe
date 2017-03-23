@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Unit 10, module 2: Selectors combinations</title>
+</head>
+<body>
+  <div class="class1">class1</div>
+  <div class="class2">class2</div>
+  <div class="class1 class2">class1 class2</div>
+
+  <ul class="main-menu">
+    <li class="very-special">
+      <a href="">very-special</a>
+    </li>
+    <li>
+      <a href="">Usual</a>
+    </li>
+
+    <a href="#">This link is not inside list-item</a>
+
+    <li class="previos">Previos item</li>
+    <li>correct item</li>
+
+    <li class="first-of-brothers">first of brothers</li>
+    <li>other brothers</li>
+    <li>other brothers</li>
+    <li>other brothers</li>
+
+    <li class="usual-item">usual-item</li>
+    <li class="usual-item">usual-item</li>
+    <li class="usual-item very-usual-item">very usual item</li>
+  </ul>
+  
+  <style type="text/css">
+    .class1 {
+      border: 5px solid black;
+    }
+    .class2 {
+      background-color: yellow;
+    }
+    /*logical and compbination*/
+    .class1.class2 {
+      font-size: 20px;
+    }
+    /*get all li that have parrent with class main-menu*/
+    .main-menu li {
+      height: 20px;
+      padding: 10px;
+      list-style: none;
+    }
+    /*get all li that have class very-special and parrent with class main-menu*/
+    .main-menu li.very-special {
+      height: 50px;
+      border: 2px solid red;
+    }
+    .main-menu a {
+      font-size: 28px;
+    }
+    /*get all a that have direct first parent with class main-menu */
+    .main-menu>a {
+      background-color: #340909;
+      border: 5px dashed yellow;
+    }
+    /*get li that goes immediately after another li with class previos*/
+    li.previos+li {
+      background-color: red;
+    }
+    /*get all li that goes after first of brother*/
+    .first-of-brothers~li {
+      background: blue; 
+    }
+    .usual-item:not(.very-usual-item) {
+      border: 5px dashed green;
+    }
+  </style>
+</html>		

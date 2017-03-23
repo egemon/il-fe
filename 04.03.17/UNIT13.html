@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNIT13</title>
+</head>
+<body>
+	<div class="clearfix">
+		<div class="column column1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sapiente, sit fuga libero non rem, saepe 
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sapiente, sit fuga libero non rem, saepe 
+		</div>
+		<div class="column column2">
+			Lorem ipsum dolor sit amet
+		</div>
+	</div>
+	<div class="next">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	</div>
+
+	<style type="text/css">
+		div {
+			background: green;
+		}
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.column {
+			float: left;
+			width: 25%;
+		}
+		.next {
+			background-color: yellow;
+		}
+
+		.clearfix::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.clearfix::before {
+			content: 'adfkadsflkjahsdfksdf';
+			display: block;
+			height: 20px;
+			background-color: #555;
+		}
+
+		.next::first-letter {
+			font-size: 50px;
+			color: blue;
+		}
+
+		.next::first-line {
+			font-size: 25px;
+			color: chocolate;
+		}
+
+		.next::selection {
+			background-color: red;
+			color: white;
+		}
+
+		/*.menu*/
+		/*.menu__item*/
+		/*.menu__item--modifier*/
+	</style>
+
+	<ul>
+		<li class="list__item--witih-icon">Lorem ipsum.</li>
+		<li class="list__item--witih-icon">Lorem ipsum.</li>
+		<li class="list__item--witih-icon">Lorem ipsum.</li>
+		<li class="list__item--witih-icon">Lorem ipsum.</li>
+	</ul>
+	<style>
+		.list__item--witih-icon::before {
+			content: '';
+			list-style: none;
+			width: 10px;
+			height: 10px;
+			margin-right: 10px;
+			display: inline-block;
+			background-image: url('https://material.io/static/images/hub/icons.svg');
+		}
+	</style>
+</body>
+</html>

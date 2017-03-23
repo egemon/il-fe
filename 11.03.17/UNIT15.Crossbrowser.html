@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 14: Position</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+</head>
+<body>
+
+    <div class="container">Heresomecontent Heresomecontent Heresomecontent </div>
+    <select name="" id="" class="appearcance">
+        <option>option1</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+        <option>option5</option>
+    </select>
+
+    <input type="number">
+    <label>
+        <input type="radio">
+        Radio
+    </label>
+    <span class="custom-radio">
+        <input id="my" type="radio" name="radio">
+        <label for="my">
+            Radio
+        </label>
+    </span>
+    <span class="custom-radio">
+        <input id="my2" type="radio" name="radio">
+        <label for="my2">
+            Radio
+        </label>
+    </span>
+
+    <!--[if IE]> You are using IE between 5 and 10<![endif]-->
+    <!--[if IE 8]> You are using IE 8<![endif]-->
+    <!--[if IE 9]> You are using IE 9<![endif]-->
+    <![if !IE]> This is not IE <![endif]-->
+
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 10px solid blue;
+            padding: 30px;
+            margin: 100px auto;
+            outline: 10px solid black;
+            background-color: green;
+            box-sizing: border-box;
+        }
+        .appearcance {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .custom-radio input{
+            display: none;
+        }
+        .custom-radio label:before {
+            content: '';
+            display: inline-block;
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            border: 5px solid;
+        }
+        input:checked+label:before {
+            background-color: blue;
+        }
+
+    </style>
+
+</body>
+</html>

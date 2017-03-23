@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIT17: CSS 3</title>
+</head>
+<body>
+    <div class="container">
+        Text in container
+        <div class="child"> Text in child</div>
+    </div>
+    <style>
+        .container {
+            text-align: right;
+            text-decoration: underline;
+            text-transform: capitalize;
+            letter-spacing: 10px;
+            color: green;
+
+            font: italic bold 16px/40px Arial, Helvetica, sans-serif;
+            /*is the same as*/
+            line-height: 40px;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <div class="back"></div>
+    <style>
+        .back {
+            height: 200px;
+            background-image: url(https://goodbudget.com/wp-content/uploads/2013/10/logo.png);
+            /*background-size: contain;*/
+            /*background-size: cover;*/
+            background-color: greenyellow;
+            background-repeat: repeat-x repeat-y;
+            background-position: 10px 10px;
+        }
+    </style>
+    <div class="color-container">
+        <div class="rgba">Good text</div>
+        Text in container
+    </div>
+    <style>
+        .color-container {
+            background-color: #fe0101;
+            color: hsl(100, 50%, 50%);
+        }
+        .rgba {
+            background-color: rgba(0, 0, 255, 0.2);
+            color: rgb(0, 255, 0);
+        }
+    </style>
+    CSS3
+    <button class="border-radius">Cute button</button>
+    <div class="linear-gradient"></div>
+    <div class="radial-gradient"></div>
+    <div class="shadow">This text has shadow as well as block has</div>
+    <div class="menu-item">Here is very very very long text</div>
+    <div class="transform">This block is well transformed</div>
+    <div class="transition">This block is transitioned</div>
+    <style>
+        .border-radius {
+            border-radius: 10px 10px 5px 1px;
+        }
+        .linear-gradient {
+            background: linear-gradient(5deg, #f00 33%, #0f0 66%, #00f);
+            height: 100px;
+        }
+        .radial-gradient {
+            background: radial-gradient(#f00 33%, #0f0 66%, #00f);
+            height: 100px;
+        }
+        .shadow {
+            width: 50%;
+            text-shadow: 5px 30px 1px hsl(100, 57%, 44%);
+            box-shadow: 30px 5px 5px black;
+            margin-bottom: 50px;
+        }
+        .menu-item {
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .transform {
+            background-color: green;
+            width: 50px;
+            transform: translate(50px, 50px) rotate(10deg) scale(2);
+        }
+        .transition {
+            margin-top: 100px;
+            transition: all 1s ease-out 0.1s;
+            background-color: blue;
+            color: green;
+        }
+        .transition:hover {
+            background-color: green;
+            color: white;
+            transform: scale(0.5);
+        }
+        .transition:active {
+            background-color: mediumaquamarine;
+            color: blue;
+            transform: rotate(90deg);
+        }
+    </style>
+</body>
+</html>

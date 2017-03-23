@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UNIT 10: Module 1: Basic selectors</title>
+</head>
+<body>
+  <div>Tag styles</div>
+  <div class="class">Class styles </div>
+  <div class="class class-that-stands-lower">With two classes</div>
+  <input type="" name="" disabled value="this input have disabled attirubute">
+  <div id="myId">My id</div>
+
+  <div style="background: brown">This is with inline styles</div>
+  <!--  selectors specificity
+  * - 0
+  tag - 1
+  .class - 10
+  [attr] - 10
+  #id - 100 
+  ...
+  !important property
+  ...style="" - attribute
+  -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    div {
+      background-color: green;
+    }
+    .class {
+      background-color: blue;
+    }
+    .class-that-stands-lower {
+      background-color: black;
+    }
+    /*these styles are the same as above*/
+    [class="class-that-stands-lower"] {
+      background-color: black;
+    }
+    /*    boolean attributes don't need value   */
+    [disabled] {
+      background-color: yellow;
+    }
+    #myId {
+      background-color: #ddd;
+    }
+
+    div {
+      background-color: chocolate !important;
+    }
+
+  </style>
+  
+</body>
+</html>

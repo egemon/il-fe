@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIT 16. Adaptive and all other types</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+</head>
+<body>
+    <div class="container container--fixed">
+        <div class="column column--fixed">
+            Block left Block left Block left Block left  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consequatur cum, cumque dolor
+        </div>
+        <div class="column column--fixed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae culpa, cum dicta distinctio doloribus dolorum eius error harum id molestiae nemo nisi odio placeat quisquam
+        </div>
+    </div>
+    <div class="container container--fluid">
+        <div class="column column--fluid">
+            Block left Block left Block left Block left  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consequatur cum, cumque dolor
+        </div>
+        <div class="column column--fluid">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae culpa, cum dicta distinctio doloribus dolorum eius error harum id molestiae nemo nisi odio placeat quisquam
+        </div>
+    </div>
+    <div class="container container--mediaquires">
+        <div class="column column--fixed column--mediaquires">
+            Block left Block left Block left Block left  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consequatur cum, cumque dolor
+        </div>
+        <div class="column column--fixed column--mediaquires">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae culpa, cum dicta distinctio doloribus dolorum eius error harum id molestiae nemo nisi odio placeat quisquam
+        </div>
+    </div>
+    <div class="container container--fluid container--mediaquires">
+        <div class="column column--fluid column--mediaquires">
+            Block left Block left Block left Block left  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consequatur cum, cumque dolor
+        </div>
+        <div class="column column--fluid column--mediaquires">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae culpa, cum dicta distinctio doloribus dolorum eius error harum id molestiae nemo nisi odio placeat quisquam
+        </div>
+    </div>
+    <style>
+        div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 5px solid green;
+        }
+        .container--fixed {
+            width: 1200px;
+        }
+        .column {
+            float: left;
+        }
+        .container {
+            margin: 0 auto;
+        }
+        .container {
+            overflow: hidden;
+        }
+        .column:last-child {
+            margin-right: 0;
+            float: right;
+        }
+
+        /* fixed design*/
+        .column--fixed {
+            width: 500px;
+        }
+
+        /* fluid design*/
+        .column--fluid {
+            width: 45%;
+            margin-right: 10%;
+        }
+
+        /*media-quaries*/
+        @media (max-width: 1010px) {
+            .container--mediaquires {
+                width: 100%
+            }
+            .column--mediaquires {
+                margin: 0;
+            }
+            .column--fixed.column--mediaquires {
+                width: 445px;
+            }
+            .column--fluid.column--mediaquires {
+                width: 50%;
+            }
+        }
+    </style>
+    <div class="wrapper">
+        <div class="menu">
+            Menu MenuMenu Menu MenuMenuMenu Menu MenuMenuMenu Menu MenuMenuMenu Menu MenuMenuMenu Menu Menu
+        </div>
+        <div class="aside">
+            aside aside aside asideaside aside aside asideaside aside aside asideaside aside aside asideaside aside aside aside
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dicta labore laboriosam neque nihil nostrum nulla pariatur perspiciatis provident quae quas repellat ut, veniam. Accusantium adipisci aspernatur culpa ea provident?
+        </div>
+    </div>
+    <style>
+        .wrapper {
+            overflow: hidden;
+            min-width: calc(500px + 250px + 200px + 10px)
+        }
+        .menu {
+            float: left;
+            width: 250px;
+        }
+        .content {
+            min-width: 500px;
+            margin-left: 250px;
+            margin-right: 25%;
+        }
+        .aside {
+            float: right;
+            width: 25%;
+            max-width: 200px;
+        }
+        @media (max-width: 960px) {
+            .wrapper {
+                min-width: inherit;
+            }
+            .menu {
+                width: 50%;
+            }
+            .content {
+                margin-left: 50%;
+                margin-right: 0;
+            }
+            .aside {
+                display: none;
+            }
+        }
+        @media (max-width: 500px) {
+            .menu,
+            .aside,
+            .content {
+                display: block;
+                float: none;
+                width: auto;
+                max-width: inherit;
+                margin: 0;
+            }
+        }
+
+    </style>
+    <img class="fluid-image" src="http://i62.beon.ru/89/53/2175389/50/74569550/x_4157f621.jpeg">
+    <style>
+        .fluid-image {
+            max-width: 100%;
+        }
+    </style>
+
+</body>
+</html>

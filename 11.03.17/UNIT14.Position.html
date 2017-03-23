@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit 14: Position</title>
+</head>
+<body>
+    <!-- Defult position for all elements is static static  -->
+    <div class="static">static static static static  static static  static static static</div>
+    <div class="relative">relative relative relative relative</div>
+    <div class="static">static static static static  static static  static static static</div>
+    <div class="absolute-container">
+        <div class="absolute all-props">Absolute with all position props</div>
+        <div class="absolute top-left">Absolute top left</div>
+        <div class="absolute center">Absolute center 200*200</div>
+        <div class="absolute beneath-bottom">Absolute beneath bottom</div>
+    </div>
+    <div class="fixed">Fixed will be here when scrolling</div>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            border: 5px solid blue;
+        }
+        body {
+            font-size: 40px;
+        }
+        .relative {
+            position: relative; /* try to comment this */
+            top: 20px;
+            left: 50px;
+            bottom: 1000px; /* will not work, as top presents*/
+            right: 1000px; /* will not work, as left presents*/
+        }
+        .absolute-container {
+            position: relative; /*creates system of coordinates for absolute block inside*/
+            height: 500px;
+        }
+        .absolute {
+            background-color: green;
+            position: absolute;
+        }
+        .all-props {
+            top: 30px;
+            left: 50px;
+
+            bottom: 50px; /*try to comment this*/
+            right: 10px; /*try to comment this*/
+
+        }
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+        .center {
+            top: 50%;
+            left: 50%;
+
+            width: 200px;
+            margin-left: -100px;
+
+            height: 200px;
+            margin-top: -100px;
+        }
+        .beneath-bottom {
+            bottom: -215px;
+            height: 200px;
+        }
+        .fixed {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+        .z-index {
+            z-index: 1;
+        }
+    </style>
+
+</body>
+</html>

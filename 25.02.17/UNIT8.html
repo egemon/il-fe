@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- ============== MARGIN COLLAPSING ==================== -->
+
+	<!-- with parent and margin of block inside -->
+	<div class="block">First block</div>
+	<div>
+		<div class="block block2">Scond block</div>
+	</div>
+
+	<!-- with two sibling -->
+	<div class="block">First block</div>
+	<div class="block block2">Scond block</div>
+	<style>
+		.block {
+			background-color: #444;
+			width: 100px;
+			height: 100px;
+			/*padding: 10px;*/
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+
+			border: 5px dashed #999;
+			border-bottom: 5px solid #999;
+			margin: 25px;
+		}
+		.block2 {
+			margin-top: 60px;
+		}
+	</style>
+
+	<!-- ========== COLUMN WITH TABLE ============-->
+	<table>
+		<tr>
+			<td>
+				<div>Block  1 Block 1 Block 1 Block 1 Block 1</div>
+				<div> Block 1.1 Block 1.1 Block 1.1 Block 1.1</div>
+			</td>
+			<td>
+				<div>Block 2 Block 2 Block 2 Block 2 Block 2</div>
+				<div>Block 2.2 Block 2.2 </div>
+			</td>
+			<td>
+				<div>Block 3 Block 3 Block 3</div>
+				<div>Block 3.1 Block 3.1 Block 3.1</div>
+			</td>
+		</tr>
+	</table>
+
+	<style type="text/css">
+		table div {
+			background-color: green;
+			border: 3px solid blue;
+		}
+	</style>
+
+
+<!-- ============== FLAOTS FIRST USAGE ===========-->
+<div>
+	<img src="https://pp.vk.me/c638922/v638922095/229bb/18EhA6WLrg0.jpg">
+	<div>
+		
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut ducimus esse modi accusantium reiciendis dolorem. Quae nemo suscipit neque porro ipsam laborum quas debitis facere cum maiores? Rerum quisquam magnam quod ex, ipsam distinctio minus saepe temporibus cum eos a commodi sequi possimus, iure eius nemo voluptates fuga debitis aliquid quam aspernatur pariatur dolore molestias. Esse ab ratione quia magnam facilis, sint, perspiciatis molestias, velit laudantium nesciunt harum, consectetur earum. Incidunt quae deserunt minima, quia veniam illum nam, necessitatibus neque. Consequatur, suscipit veniam porro nostrum explicabo, voluptatem fugit placeat?
+	</div>
+</div>
+
+<style type="text/css">
+	img {
+		float: left;
+	}
+
+</style>
+
+
+<!-- ========== COLUMN WITH FLOATS:CLEAR-BOTH ============-->
+<div>
+	<div class="float">
+		block 1 block 1 block 1 block 1 block 1 block 1 block 1 block 1
+	</div>
+	<div class="float">
+		block 2 block 2 block 2 block 2 block 2 block 2 block 2 block 2
+	</div>
+	<div class="float float-r">
+		block 3block 3block 3block 3 block 3block 3block 3block 3 block 3block 
+		3block 3block 3
+	</div>
+	<div class="clear"></div>
+</div>
+<style type="text/css">
+	.float {
+		background: blue;
+		border: 1px solid;
+		float: left;
+		width: 250px;
+	}
+	.float-r {
+		float: right;
+	}
+	.clear {
+		clear: both;
+		background-color: red;
+	}
+</style>
+
+<!-- ========== COLUMN WITH FLOATS:OVERFLOW-HIDDEN ============-->
+<div class="float-parent">
+	<div class="float">
+		block 1 block 1 block 1 block 1 block 1 block 1 block 1 block 1
+	</div>
+	<div class="float">
+		block 2 block 2 block 2 block 2 block 2 block 2 block 2 block 2
+	</div>
+	<div class="float float-r">
+		block 3block 3block 3block 3 block 3block 3block 3block 3 block 3block 
+		3block 3block 3
+	</div>
+</div>
+<style type="text/css">
+	.float {
+		background: blue;
+		border: 1px solid;
+		float: left;
+		width: 250px;
+	}
+	.float-r {
+		float: right;
+	}
+	.float-parent {
+		overflow: hidden;
+	}
+</style>
+<!-- ========== COLUMN WITH INLINE BLOCKS ============-->
+<div class="diblock-parent">
+	<div class="diblock">
+		block 1 block 1 block 1 block 1 block 1 block 1 block 1 block 1
+	</div>
+	<div class="diblock">
+		block 2 block 2 block 2 block 2 block 2 block 2 block 2 block 2
+	</div>
+	<div class="diblock">
+		block 3block 3block 3block 3 block 3block 3block 3block 3 
+		block 3block 3block 3block 3
+	</div>
+</div>
+<style type="text/css">
+	.diblock {
+		display: inline-block;
+		border: 5px solid;
+		width: 250px;
+		font-size: 14px;
+	}
+	.diblock-parent {
+		font-size: 0;
+	}
+</style>
+
+
+<!-- ============== COLUMNS WITH FLEXBOXES ===========-->
+<div class="flex-parent">
+	<div class="flex">
+		block 1 block 1 block 1 block 1 block 1 block 1 block 1 block 1
+	</div>
+	<div class="flex">
+		block 2 block 2 block 2 block 2 block 2 block 2 block 2 block 2block 2 
+		block 2 block 2 block 2 block 2 block 2 block 2 block 2block 2 block 2 
+		block 2 block 2 block 2 block 2 block 2 block 2
+	</div>
+	<div class="flex">
+		block 3block 3block 3block 3 block 3block 3block 3block 3 block 3block 
+		3block 3block 3 3 block 3block 3block 3block 3 block 3block 3block 
+		3block 3
+	</div>
+</div>
+<style type="text/css">
+	.flex {
+		border: 5px solid;
+	}
+	.flex-parent {
+		display: flex;
+	}
+</style>
+
+
+</body>
+</html>

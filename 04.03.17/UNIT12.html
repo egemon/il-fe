@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNIT12: Pseudo-classes</title>
+</head>
+<body>
+	<ul class="list">
+		<li class="list-item">
+			<a class="list-link">item 1</a>
+		</li>
+		<li class="list-item">
+			<a class="list-link">item 8</a>
+		</li>
+	</ul>
+	<ul class="list">
+		<li class="list-item"></li>
+		<li class="list-item">
+			<a class="list-link">item 1</a>
+		</li>
+		<li class="list-item"></li>
+	</ul>
+
+	<style type="text/css">
+		* {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.list-item:first-child {
+			background-color: green;
+		}
+		.list-item:last-child {
+			border: 5px solid blue;
+		}
+		.list-item:only-child {
+			font-size: 25px;
+		}
+		.list-item:empty {
+			margin-left: 20px;
+			height: 20px;
+			width: 100px;
+		}
+		.list-item:nth-child(2n+1) {
+			line-height: 50px;
+			padding-left: 20px;
+		}
+		.list-item:nth-child(2n) {
+			line-height: 20px;
+			padding-left: 50px;
+		}
+		.list-item:hover {
+			font-size: 50px;
+			line-height: 1;
+		}
+		.list-item:active {
+			width: 100px;
+		}
+	</style>
+<!-- ===================================== -->
+	<a href="#111" class="link">Link111</a>
+	<a href="#111" class="link">Link111</a>
+	<a href="#222" class="link">Link222</a>
+	<style>
+		.link:link {
+			color: black;
+		}
+		.link:visited {
+			color: yellow;
+		}
+	</style>
+<!-- ===================================== -->
+	<input type="" name="" class="my-input">
+	<input type="number">
+	<input type="" name="" required>
+	<style>
+		.my-input:focus {
+			background-color: aqua;
+		}
+		input:invalid {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</body>
+</html>
