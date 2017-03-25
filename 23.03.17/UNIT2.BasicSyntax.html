@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIT2.BasicSyntax</title>
+</head>
+<body>
+<script>
+
+    var a; // the same as below
+    var b = undefined;
+    // alert(a);
+    // alert(b);
+    var c, d = 5;
+    // alert(d);
+    // alert(e); //- will throw an error, as far as e is not defined
+
+    // ============= DATAT TYPES ================
+
+    // ===== PRIMITIVES =======
+    // NUMBER (NOT INTEGER FLOAT AND SO ON)
+    var int = 6;
+    var float = 5.678;
+    var negative = -0.33333;
+    console.log(int, float, negative);
+    console.log('typeof negative', typeof negative);
+    console.log(5 / 0);
+    console.log("typeof Infinity", typeof Infinity);
+    var inf = Infinity;
+    console.log(-5 / 0);
+    var minusInf = -Infinity;
+    console.log(-5 / Infinity);
+    console.log(-5 / -Infinity);
+    var minusZero = -0;
+    console.log(Infinity / Infinity);
+    var notANumber = NaN;
+    console.log(notANumber);
+    console.log('typeof notANumber', typeof notANumber);
+
+    // STRINGS (NOT CHAR )
+    var str = 'a';
+    var word = 'my word';
+    var numberInString = '2';
+    var withEnter = 'my \n second';
+
+    console.log(str, word, withEnter);
+    console.log('typeof word', typeof word);
+    console.log('typeof numberInString', typeof numberInString);
+    // BOOLEAN
+    var truthy = true;
+    var falsy = false;
+    console.log(truthy, falsy);
+    console.log('typeof truthy', typeof truthy);
+
+    // ===== SPECIAL VALUES =======
+    var notDefined = undefined;
+    var NULL = null;
+    console.log('typeof notDefined', typeof notDefined);
+    console.log('typeof NULL', typeof NULL);
+
+    // ====== OBJECT =========
+    var object = {};
+    var array = [];
+    var myFunction = function (param) {
+      return param;
+    };
+    console.log('typeof object', typeof object);
+    console.log('typeof array', typeof array);
+    console.log('typeof myFunction', typeof myFunction);
+
+</script>
+</body>
+</html>
