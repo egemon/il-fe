@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIT2.Operators</title>
+</head>
+<body>
+<script>
+//  =============== IF THEN ELSE ==========
+//  
+
+var condition = true; // {}, [], function () {}
+var condition = ''; // false, '', 0, NaN, undefined, null
+if (condition) {
+ console.log('Condition is truthy!');
+}
+
+if (condition) {
+ console.log('Condition is truthy!');
+} else {
+ console.log('Condition is falsy!');
+}
+
+var condition2 = 0;
+var condition3 = '';
+
+if (condition2) {
+ console.log('Condition2 is truthy!');
+} else if (condition3) {
+ console.log('Condition2 is falsy, but condition3 is truthy!');
+} else {
+ console.log('Condition2 is falsy and Condition3 is falsy!');
+}
+
+var condtition4 = NaN;
+if (condtition4)
+ console.log('condtition4 is true');
+else
+ console.log('condtition4 is false');
+
+var switchCondition = '555';
+var result;
+
+
+//  =============== SWITCH CASE ==========
+switch (switchCondition) {
+  case 'someValue':
+    result = 1;
+    break;
+
+  case 'otherValue':
+    result = 2;
+    break;
+
+  case '555':
+    result = 'seem like jackpot';
+    console.log('result ', result);
+    break;
+  case 555:
+    result = 'jackpot';
+    console.log('result ', result);
+    break;
+
+  default:
+    result = 999;
+}
+
+
+//  ============ CYCLES ===========
+var i = 0;
+while (i <= 10) {
+ i++;
+}
+console.log('i', i);
+
+
+var j = 0;
+do {
+ j++;
+} while (j <= 10);
+
+console.log('j', j);
+
+for (var k=0; k <= 10; k++) {
+    console.log('k', k);
+}
+
+</script>
+</body>
+</html>

@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>UNIT2.BasicSyntax</title>
+  <meta charset="UTF-8">
+  <title>UNIT2.BasicSyntax</title>
 </head>
 <body>
 <script>
 
-    var a; // the same as below
-    var b = undefined;
-    // alert(a);
-    // alert(b);
-    var c, d = 5;
-    // alert(d);
-    // alert(e); //- will throw an error, as far as e is not defined
+  var a; // the same as below
+  var b = undefined;
+  alert(a);
+  alert(b);
+  var c, d = 5;
+  alert(d);
+  //- will throw an error, as far as e is not defined
+  // alert(e); 
 
-    // ============= DATAT TYPES ================
+  // ============= DATA TYPES ================
 
-    // ===== PRIMITIVES =======
-    // NUMBER (NOT INTEGER FLOAT AND SO ON)
-    var int = 6;
-    var float = 5.678;
-    var negative = -0.33333;
-    console.log(int, float, negative);
-    console.log('typeof negative', typeof negative);
-    console.log(5 / 0);
-    console.log("typeof Infinity", typeof Infinity);
-    var inf = Infinity;
-    console.log(-5 / 0);
-    var minusInf = -Infinity;
-    console.log(-5 / Infinity);
-    console.log(-5 / -Infinity);
-    var minusZero = -0;
-    console.log(Infinity / Infinity);
-    var notANumber = NaN;
-    console.log(notANumber);
-    console.log('typeof notANumber', typeof notANumber);
+  // ===== PRIMITIVES =======
+  // NUMBER (NOT INTEGER FLOAT AND SO ON)
+  var int = 6;
+  var float = 5.678;
+  var negative = -0.33333;
+  console.log(int, float, negative);
+  console.log('typeof negative', typeof negative);
+  console.log(5 / 0);
+  console.log("typeof Infinity", typeof Infinity);
+  var inf = Infinity;
+  console.log(-5 / 0);
+  var minusInf = -Infinity;
+  console.log(-5 / Infinity);
+  console.log(-5 / -Infinity);
+  var minusZero = -0;
+  console.log(Infinity / Infinity);
+  var notANumber = NaN;
+  console.log(notANumber);
+  console.log('typeof notANumber', typeof notANumber);
 
-    // STRINGS (NOT CHAR )
-    var str = 'a';
-    var word = 'my word';
-    var numberInString = '2';
-    var withEnter = 'my \n second';
+  // STRINGS (NOT CHAR )
+  var str = "a";
+  var word = 'my word';
+  var numberInString = '2';
+  var withEnter = 'my \n second';
 
-    console.log(str, word, withEnter);
-    console.log('typeof word', typeof word);
-    console.log('typeof numberInString', typeof numberInString);
-    // BOOLEAN
-    var truthy = true;
-    var falsy = false;
-    console.log(truthy, falsy);
-    console.log('typeof truthy', typeof truthy);
+  console.log(str, word, withEnter);
+  console.log('typeof word', typeof word);
+  console.log('typeof numberInString', typeof numberInString);
 
-    // ===== SPECIAL VALUES =======
-    var notDefined = undefined;
-    var NULL = null;
-    console.log('typeof notDefined', typeof notDefined);
-    console.log('typeof NULL', typeof NULL);
+  // BOOLEAN
+  var truthy = true;
+  var falsy = false;
+  console.log(truthy, falsy);
+  console.log('typeof truthy', typeof truthy);
 
-    // ====== OBJECT =========
-    var object = {};
-    var array = [];
-    var myFunction = function (param) {
-      return param;
-    };
-    console.log('typeof object', typeof object);
-    console.log('typeof array', typeof array);
-    console.log('typeof myFunction', typeof myFunction);
+  // ===== SPECIAL VALUES =======
+  var notDefined = undefined;
+  var NULL = null;
+  console.log('typeof notDefined', typeof notDefined);
+  console.log('typeof NULL', typeof NULL);
+
+  // ====== OBJECT =========
+  var object = {
+    prop:'a'
+  };
+  var array = ['a'];
+
+  var sum = function (first, second) {
+    var result = first + second;
+    return result;
+  };
+
+  var sumOf = sum(1, 2);
+  console.log(sumOf);
+  console.log('typeof object', typeof object);
+  console.log('typeof array', typeof array);
+  console.log('typeof myFunction', typeof myFunction);
 
 </script>
 </body>
