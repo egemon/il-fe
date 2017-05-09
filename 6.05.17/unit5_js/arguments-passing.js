@@ -1,36 +1,66 @@
 var one = 1;
 var two = 2;
 var three = 3;
-var object = {};
+
 
 function multiply (firstMultiplier, secondMultiplier) {
   console.log('function Multiply have been called', firstMultiplier, secondMultiplier);
+
 }
+
 // arguments are values which are passed as parameters
-multiply(one);
-multiply(one, two, three);
+// multiply(one);
+// multiply(one, two, three);
 
+
+//
 function multiplyAll () {
-  console.log('function multiplyAll have been called with arguments: ', arguments);
-  console.log('arguments.length', arguments.length);
-  console.log('multiplyAll.length', multiplyAll.length)
+  console.log('multiplyAll ', arguments);
+  // console.log('arguments.length', arguments.length);
+  // console.log('multiplyAll.length', multiplyAll.length)
+}
+//
+// multiplyAll('argument1', 'argument2', 'argument3');
+
+function sum (arg1, arg2, arg3) {
+  return arg1 + arg2 + arg3;
+}
+function sum () {
+  var result = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
 }
 
-multiplyAll('argument1', 'argument2', 'argument3');
+// console.log(sum(1, 2, 3, 4));
 
+//
 // primitives vs objects
 
-function mutateArgument (argument) {
-  argument = argument * 100;
-  console.log(argument);
-}
-mutateArgument(one);
-console.log(one);
+var counter = 0;
+function count (innerCounter) {
+  // var innerCounter = 1;
+  innerCounter++;
 
-
-function mutateArgument2 (argument) {
-  argument.name = 'my new cool name';
+  // console.log(innerCounter);
 }
-mutateArgument2(object);
-mutateArgument(object);
-console.log(object);
+
+// count(counter);
+
+// console.log(counter);
+
+var counterObj = {
+  counter: 0
+};
+function mutateArgument2 (innerCounterObj) {
+  // var innerCounterObj = counterObj;
+  innerCounterObj.counter = innerCounterObj.counter + 1;
+  if (innerCounterObj.counter === 1) {
+    innerCounterObj = null;
+  }
+  console.log(innerCounterObj)
+}
+console.log(counterObj);
+mutateArgument2(counterObj);
+console.log(counterObj);
