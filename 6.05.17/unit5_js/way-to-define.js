@@ -86,6 +86,8 @@ multiply4();
 // IIFE
 (
   function (firstMultiplier, secondMultiplier) {
+    var ilya = 'ilya';
+
     console.log('Anonymus functions have been called', firstMultiplier, secondMultiplier);
   }
 )(7, 8);
